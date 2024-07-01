@@ -95,12 +95,12 @@ start udp server and the output goes to the TCPClient at port 4455
 ```
 
 
-/// send message to the server
+send message to the server
 ```bash
 echo "2" | nc -u localhost 4050
 ```
 
-// open a terminal and  get the message from the client
+open a terminal and  get the message from the client
 ```
  nc -l 4455
 
