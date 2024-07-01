@@ -3,6 +3,7 @@
 ## OS_EX2_1
 
 ```bash
+cd OS_EX2
 make
 cd OS_EX2_1
 ./ttt 123456789
