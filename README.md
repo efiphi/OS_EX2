@@ -80,6 +80,57 @@ nc localhost 4050
 now you can type a message in terminal 2 and see it on terminal 3, and the opposite.
 
 
+## OS_EX2_4
+
+
+```sh
+// This command starts a UDP server on port 4050 and listens for input.
+// The server will terminate after 10 seconds if no input is received. 
+./mync -e "./ttt 123456789" -i UDPS4050 -t 10
+
+// start udp server and the output goes to the TCPClient at port 4455
+
+./mync -e "./ttt 123456789" -i UDPS4050 -o TCPClocalhost,4455
+
+
+/// send message to the server
+
+echo "2" | nc -u localhost 4050
+
+// open a terminal and  get the message from the client
+ nc -l 4455
+
+```
+
+
+## OS_EX2_6
+### Example 1: Unix Domain Datagram Socket
+
+```sh
+// Server
+
+./mync -i UDSSD/tmp/uds_socket -t 10
+
+
+// Client:
+
+echo "Hello, World!" | ./mync -o UDSCD/tmp/uds_socket
+```
+
+### Example 2: Unix Domain Stream Socket
+```sh
+// Server:
+
+./mync -i UDSSS/tmp/uds_stream_socket -t 10
+
+// Client:
+
+echo "Hello, World!" | ./mync -o UDSCS/tmp/uds_stream_socket
+```
+
+
+
+
 
 
 
