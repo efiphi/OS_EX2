@@ -110,25 +110,29 @@ echo "2" | nc -u localhost 4050
 ## OS_EX2_6
 ### Example 1: Unix Domain Datagram Socket
 
-```sh
-// Server
-
+ Server
+```bash
 ./mync -i UDSSD/tmp/uds_socket -t 10
+```
 
 
-// Client:
-
+Client:
+```bash
 echo "Hello, World!" | ./mync -o UDSCD/tmp/uds_socket
 ```
 
 ### Example 2: Unix Domain Stream Socket
-```sh
-// Server:
+
+Server:
+
+```bash
 
 ./mync -i UDSSS/tmp/uds_stream_socket -t 10
+```
 
-// Client:
+Client:
 
+```
 echo "Hello, World!" | ./mync -o UDSCS/tmp/uds_stream_socket
 ```
 
