@@ -82,6 +82,12 @@ now you can type a message in terminal 2 and see it on terminal 3, and the oppos
 
 ## OS_EX2_4
 
+open a terminal and  get the message from the client
+```
+ nc -l 4455
+
+```
+
 
 start udp server and the output goes to the TCPClient at port 4455
 ```bash
@@ -94,11 +100,7 @@ send message to the server
 echo "2" | nc -u localhost 4050
 ```
 
-open a terminal and  get the message from the client
-```
- nc -l 4455
 
-```
 
 
 ## OS_EX2_6
