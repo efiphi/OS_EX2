@@ -83,12 +83,6 @@ now you can type a message in terminal 2 and see it on terminal 3, and the oppos
 ## OS_EX2_4
 
 
-
-This command starts a UDP server on port 4050 and listens for input.
-The server will terminate after 10 seconds if no input is received. 
-```bash
-./mync -e "./ttt 123456789" -i UDPS4050 -t 10
-```
 start udp server and the output goes to the TCPClient at port 4455
 ```bash
 ./mync -e "./ttt 123456789" -i UDPS4050 -o TCPClocalhost,4455
